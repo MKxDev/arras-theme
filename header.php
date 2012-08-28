@@ -20,6 +20,7 @@
 
 <?php
 wp_enqueue_script( 'superfish', get_template_directory_uri() . '/js/superfish/superfish.js', array( 'jquery' ), '2011-12-01' );
+wp_enqueue_script( 'menuExpand', get_template_directory_uri() . '/js/menu-expand.js', array( 'jquery' ), '2011-12-01' );
 wp_enqueue_script( 'hoverIntent', get_template_directory_uri() . '/js/superfish/hoverIntent.js', array( 'jquery' ), '2011-12-01' );
 
 if ( is_singular() ) {
@@ -71,7 +72,7 @@ document.body.className = c;
 		<span class="blog-description"><?php bloginfo('description'); ?></span>
 		<?php endif ?>
 	</div>
-	<div id="searchbar"><?php get_search_form() ?></div>
+	<div id="searchbar"><?php get_search_form() ?> <?php arras_beside_nav(); ?></div>
 	</div><!-- #branding -->
 </div><!-- #header -->
 
@@ -80,14 +81,19 @@ document.body.className = c;
 	<div id="nav-content" class="clearfix">
 	<?php 
 	if ( function_exists('wp_nav_menu') ) {
-		wp_nav_menu( array( 
-			'sort_column' => 'menu_order', 
-			'menu_class' => 'sf-menu menu clearfix', 
-			'theme_location' => 'main-menu', 
-			'fallback_cb' => 'arras_nav_fallback_cb' 
-		) );
+		?>
+		<div class="sf-menu-wrp clearfix">
+		<?php
+			wp_nav_menu( array( 
+				'sort_column' => 'menu_order', 
+				'menu_class' => 'sf-menu menu clearfix', 
+				'theme_location' => 'main-menu', 
+				'fallback_cb' => 'arras_nav_fallback_cb' 
+			) );
+			?>
+		</div>
+		<?php
 	}
-	arras_beside_nav(); 
 	?>
 	</div><!-- #nav-content -->
 </div><!-- #nav -->

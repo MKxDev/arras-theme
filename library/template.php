@@ -97,6 +97,7 @@ function arras_add_footer_js() {
 	?>
 	<script type="text/javascript">
 	jQuery(document).ready( function($) {
+		$('.sf-menu-wrp').menuExpand();
 		<?php do_action( 'arras_custom_js-footer' ) ?>
 	} );
 	</script>

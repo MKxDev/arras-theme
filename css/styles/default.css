@@ -70,7 +70,8 @@ label.error				{ border: 1px solid #D8000C; color: #D8000C; background: #FFBABA;
 /* main navigation */
 #nav  { background: url(../../images/topnav.jpg) repeat-x bottom #322C2C; min-width: 990px; }
 #nav-content  { margin: 0 auto; width: 978px; }
-#nav .sf-menu  { float: left; line-height: 1.2; max-width: 770px; }
+#nav .sf-menu-wrp { width: 978px; height: 35px; float: left; }
+#nav .sf-menu  { float: left; line-height: 1.2; width: 99999999px; }
 #nav .sf-menu a  { display: block; text-decoration: none; padding: 8px 12px 11px; color: #AAA; font-size: 14px; }
 #nav .sf-menu ul li  { border: 1px solid #474331; margin-top: 0; }
 #nav .sf-menu a:hover, #nav .sf-menu li:hover, #nav .sf-menu li.sfHover, #nav .sf-menu ul li  { background: #373331; color: #FFF; }
@@ -249,3 +250,10 @@ label.error				{ border: 1px solid #D8000C; color: #D8000C; background: #FFBABA;
 #footer .widgetcontent	{ font-size: 12px; background: none; padding: 0; border: none; }
 #footer .footer-message	{ font-size: 11px; }
 .footer-sidebar-container  { border-bottom: 1px solid #CCC; }
+
+/* Shadows */
+.box-shadow {
+	-webkit-box-shadow: 0px 5px 10px 0px #0F0D0D;
+	-moz-box-shadow: 0px 5px 10px 0px #0F0D0D;
+	box-shadow: 0px 5px 10px 0px #0F0D0D;
+}
